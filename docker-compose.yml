@@ -1,0 +1,23 @@
+# Fase G: Docker Compose para Orquestación Local
+# Guarda este archivo como "docker-compose.yml" en la raíz de tu proyecto "guate-servicios".
+
+services:
+  # 1. Servicio del Backend (solo BACKEND)
+  backend:
+    build:
+      context: . # El contexto es el directorio actual
+      dockerfile: Dockerfile
+    container_name: guate-servicios-backend
+    restart: unless-stopped
+    ports:
+      - "3001:3000" # Mapea el puerto del host al contenedor
+    env_file:
+      - ./.env # Carga las variables de entorno desde el archivo .env en el directorio actual
+    volumes:
+      - ./src:/usr/src/app/src # Monta el código fuente para desarrollo en vivo
+    networks:
+      - guate-net
+
+networks:
+  guate-net:
+    driver: bridge
