@@ -154,21 +154,6 @@ Ver `src/routes/*` para la documentación completa de cada endpoint.
 └── package.json           # Dependencias
 ```
 
-## Despliegue
-
-### Render
-
-1. Conecta este repo a tu cuenta de Render.
-2. Crea un "Web Service" desde GitHub.
-3. Branch: `master`
-4. Build: `pnpm install && pnpm start`
-5. Envs requeridas: `DATABASE_URL`, `JWT_SECRET`, `FRONTEND_URL`
-6. Deploy automático en cada push.
-
-### DigitalOcean / Heroku
-
-Similar a Render — proporciona `DATABASE_URL` y `JWT_SECRET` en los secrets del CI/CD o el panel.
-
 ### Docker
 
 ```bash
@@ -202,7 +187,7 @@ PORT=3000
 ## Testing
 
 Consulta `TESTS.md` en la raíz del proyecto para un plan de pruebas completo (smoke, API, DB, seguridad).
-
+ 
 ## Licencia
 
 MIT
