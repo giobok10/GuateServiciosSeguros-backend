@@ -183,10 +183,6 @@ JWT_SECRET=dev_secret_12345
 FRONTEND_URL=http://localhost:5173
 PORT=3000
 ```
-
-## Testing
-
-Consulta `TESTS.md` en la raíz del proyecto para un plan de pruebas completo (smoke, API, DB, seguridad).
  
 ## Licencia
 
